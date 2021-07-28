@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+ 
+}
+body{
+  background-color: linear-gradient(to bottom, #9a9e5e, #ffefba);
+}
+
+#navbar {
+  position: absolute;
+  top: 20px;
+  /*left: 24%;*/
+  left:23%;
+  width: 60px;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+#navbar ul li {
+  height: 50px;
+  width: auto;
+  margin: 0 60px;
+  line-height: 50px;
+  padding-right: 10px;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #b30711;
+}
+#navbar ul .active {
+  background: #b30711;
+  padding: 0 11px;
+  margin-left: 5em;
+  height: 78px;
+  border-radius: 14px;
+  
+  pointer-events: none;
+}
+
+
+
+#navbar ul .active a {
+  color: #ececf0;
+  font-weight: 800;
+}
+
+#navbar a:hover {
+	color: rgb(30, 110, 117);
+}
+
+#navbar li a {
+  transition: all 0.3s ease;
+	display: block;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+
+
+
+
+
+
+#navbar li a:hover{
+  opacity: 1;
+}
+
+#navbar li a:before{
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #720f0f;
+  width: 0%;
+  bottom: 10px;
+}
+
+
+
+#navbar li a:hover:before{
+  position:absolute;
+  width: 135%;
+}
+
+
+
+#home{
+  width:1000px;
+  display: flex;
+  flex-direction: column;
+  padding:01px 200px;
+  height: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+#home::before{
+  content: "";
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height:100%;
+  width:100%;
+  z-index: -1;
+  opacity: 0.89;
+}
+#home h1{
+  height: 20px;
+  color: black;
+  text-align: center;
+}
+
+#home p{
+  height: 100px;
+  color: black;
+  text-align: center;
+  font-size: larger;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+
+.image-area
+{
+	z-index: 1;
+	top: 55%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.img-wrapper
+{
+	width: 1440px;
+	height: 550px;
+	position: relative;
+	overflow: hidden;
+  margin-left: 771px;
+}
+
+.img-wrapper:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 180%;
+	height: 100%;
+	width: 100%;
+	background: rgba(255,255,255,.3);
+	z-index: 1;
+
+	transform: skew(45deg);
+	transition: .5s;
+}
+
+.img-wrapper:hover:before
+{
+	left: -180%;
+}
+
+.img-wrapper img
+{
+  margin-top: 13px;
+	height: 600px;
+	width: 1400px;
+	filter: grayscale(100%);
+	transition: 2s;
+}
+.img-wrapper:hover img
+{
+	filter: grayscale(0%);
+	transform: scale(1.1);
+}
+
+.img-wrapper h2
+{
+	background:#611f23;
+	font-family: Poppins;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 28px 0;
+	position: absolute;
+	bottom: 0;
+	font-size: 30px;
+	width: 100%;
+	/*transform: perspective(400px) rotateY(10deg);
+	transform-origin: down;
+	transition: 1s;*/
+}
+
+.img-wrapper:hover h2
+{
+	transform: perspective(400px) rotateY(0deg);
+}
+
+
+.merkbox {
+  background-color: linear-gradient(to right, #9a9e5e, #ffefba);
+  margin-right: 38%;
+	right: 30%;
+	margin-top: -27rem;
+	padding-bottom: 1rem;
+	margin-bottom: 2rem;
+	
+  width: 55%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+}
+
+.merktitel {
+	background-color: skyblue;
+	margin-bottom: 0rem;
+	min-height: 1rem;
+	padding: 0.5rem 0.5rem 0.3rem 1rem;
+}
+
+.merktitel p {
+	color: white;
+	font-family: 'Arvo', serif;
+	font-size: 1.5rem;
+}
+
+.merktext {
+	 padding: 1rem 1rem 3rem 1rem;
+	text-align: left;
+}
+
+.merktext p, ul {
+font-family: 'Raleway';
+}
+
+
+span {
+  display: block;
+  height: 164px;
+  width: 179px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -33%;
+  left: 58%;
+  transform: rotateZ(-25deg);
+  animation: beat 7s linear infinite;
+  z-index: 2;
+}
+/* Footer Styling */
+
+.fa-stack fa-lg {
+  position: center;
+  width:fit-content;
+  display: inline-block;
+}
+
+.footer-container > p {
+  color: white;
+}
+
+.content-footer {
+  padding: 1em 0;
+  margin-top:8em;
+  background: #5d9ab6;
+}
+
